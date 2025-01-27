@@ -225,7 +225,7 @@ body.hardware-page {
 .hardware-page .text-box {
     flex: 1;
     font-size: 1.15em;
-    line-height: 1.25;
+    line-height: 1.5;
     padding: 0em;
     background-color: #e9ecef;
     margin-right: 1em;

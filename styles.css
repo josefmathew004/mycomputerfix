@@ -124,13 +124,13 @@ body.service-page {
 .service-page header h1 {
     text-align: center;
     font-size: 2em;
-    margin-top: 0.5em;
+    margin-top: 1em;
     color: #28a745;
 }
 
 .service-page .service-content {
     display: flex;
-    margin-top: 0em;
+    margin-top: 1em;
     justify-content: space-around;
     padding: 0em;
 }

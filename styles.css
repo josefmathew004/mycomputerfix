@@ -71,15 +71,15 @@ body.home-page {
 
 .hero {
     background-color: #3be9b0;
-    color: white;
+   /* color: white;*/
     padding: 5px 5px;
-    p {
+   
         text-align: justify;
         color: #460654;
         font-size: 1;
         line-height: 1.5;
         margin-top: 0.5em; /* Text under heading */
-         }
+         
 }
 
     

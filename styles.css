@@ -1,0 +1,436 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #343a40;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    text-align: center;
+    padding: 0.45em;
+    background-color: #343a40;
+    color: #f7f2f1;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Home Page Styles */
+
+
+body.home-page {
+    background-color: #f8f9fa;
+}
+
+.home-page header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em 0;
+    color: #333;
+    position: relative;
+}
+
+.home-page header .logo {
+    position: absolute;
+    left: 300px; /* Adjust the left position to move the logo closer */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero {
+    background-color: #3be9b0;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+       p {
+        text-align: justify;
+        color: #460654;
+        font-size: 1.25em;
+        line-height: 2;
+        margin-top: 0.5em; /* Text under heading */
+         }
+    }
+
+/*
+.home-page .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}*/
+
+.home-page .column1 img{
+    float: left;
+   /* width: 250px;
+    height: 350px;*/
+    padding: 3px;
+    margin-top: 1px;
+    margin-left: 125px;
+}
+.home-page .column2 img{
+    float: left;
+   /* width: 400px;
+    height: 450px;*/
+    padding: 2px;
+    margin-top: 1px;
+    margin-left: 95px;
+}
+.home-page .column3 img{
+    float: left;
+   /* width: 300px;
+    height: 350px;*/
+    font-size: 0;
+    padding: 2px;
+    margin-top: 1px;
+    margin-left: 60px;
+}
+
+/* Mode of Service Page Styles */
+
+
+body.service-page {
+    background-color: #f1f1f1;
+}
+
+.service-page header h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0.5em;
+    color: #28a745;
+}
+
+.service-page .service-content {
+    display: flex;
+    margin-top: 0em;
+    justify-content: space-around;
+    padding: 0em;
+}
+
+.service-page .service-section {
+    text-align: center;
+    flex: 2;
+    margin: 0 1em;
+}
+
+.service-page .service-section h3 {
+    color: #28a745;
+    margin-top: 5px;
+}
+
+.service-page .service-section img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 0.1em;
+}
+
+.service-page .service-text-box {
+    background-color: #f1f1f1;
+    padding: 0em;
+    line-height: 1.25;
+    text-align: left;
+}
+
+/* Software Services Page Styles */
+
+body.software-page {
+    background-color: #f0fff4;
+}
+
+.software-page header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffc107;
+    margin-top: 1em;
+}
+
+.software-page .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.software-page .text-box {
+    flex: 1;
+    font-size: 1.15em;
+    line-height: 1.5;
+    padding: 1em;
+    background-color: #e9ecef;
+    margin-right: 1em;
+}
+
+.software-page .image-box {
+    flex: 1;
+    padding: 0em;
+   /* background-color: #e9ecef;*/
+    margin-left: 1em;
+ 
+}
+
+.software-page .image-box img {
+    height: auto;
+   max-width: 90%;
+    
+}
+
+/* Hardware Services Page Styles */
+
+body.hardware-page {
+    background-color: #e8f0fe;
+}
+
+.hardware-page header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #4caf50;
+    margin-top: 1em;
+}
+
+.hardware-page .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.hardware-page .text-box {
+    flex: 1;
+    font-size: 1.15em;
+    line-height: 1.25;
+    padding: 0em;
+    background-color: #e9ecef;
+    margin-right: 1em;
+}
+
+.hardware-page .image-box {
+    flex: 1;
+    padding: 0em;
+   /* background-color: #e9ecef;*/
+    margin-left: 1em;
+}
+
+.hardware-page .image-box img {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Gallery Page Styles */
+
+
+body.gallery-page {
+    background-color: #fff3e0;
+}
+
+.gallery-page header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #d84315;
+    margin-top: 1em;
+}
+
+.gallery-page .gallery-content {
+        .row         {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        }
+      
+      /* Create two equal columns that sits next to each other */
+        .column         {
+        flex: 50%;
+        padding: 0 4px;
+        }
+      
+      .column img        {
+        margin-top: 8px;
+        vertical-align: middle;
+       }
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  
+/* Testimonials Page Styles */
+
+
+body.testimonials-page {
+    background-color: #dbccf3;
+}
+
+.testimonials-page header h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #5e35b1;
+    margin-top: 1em;
+}
+
+.testimonials-page .testimonials-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 2em;
+}
+
+.testimonials-page .container {
+    border: 2px solid #898787;
+    background-color: #f1e2e2;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+  }
+
+.testimonials-page p{
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 0.25em;
+    text-align: justify;
+
+}
+/*
+.testimonials-page .testimonial {
+    background-color: #f8f9fa;
+    padding: 1em;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials-page .testimonial textarea {
+    resize: vertical;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+    flex-grow: 1;
+}
+
+.testimonials-page .testimonial input {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+*/
+/* Contact Us Page Styles */
+
+body.contact-page {
+    background-color: #e0f7fa;
+}
+
+.contact-page header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #00796b;
+    margin-top: 0.5em;
+}
+
+.contact-page .contact-content {
+    display: flex;
+    /*justify-content: space-between;*/
+    /*padding: 1em;*/
+    
+}
+.contact-page p1 {
+    text-align: center;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    margin-left: 10em;
+}
+.contact-page p2 {
+    text-align: center;
+    font-size: 1em;
+    padding: 2em;
+}
+.contact-page form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 10em;
+    margin-top: 3em;
+    margin-left: 2em;
+}
+
+.contact-page .form-group {
+    margin-bottom: 1.25em;
+    width: 100%;
+}
+
+.contact-page label {
+    margin-bottom: 0.5em;
+    color: #00796b;
+}
+
+.contact-page input, .contact-page textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-page button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 3px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-page button:hover {
+    background-color: #004d40;
+}
+
+.contact-page .contact-image {
+    flex: 1;
+    justify-content: space-between;
+    padding: 0;
+}
+.contact-page .contact-image img {
+   display: flex;
+   max-width: 100%;
+height: auto;
+   position: top -5px; /* Moves the image 2px closer to the top of the page */
+}

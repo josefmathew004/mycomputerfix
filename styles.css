@@ -56,7 +56,7 @@ body.home-page {
 
 .home-page header h1 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 1em 0;
     color: #333;
     position: relative;
@@ -77,8 +77,8 @@ body.home-page {
        p {
         text-align: justify;
         color: #460654;
-        font-size: 1.25em;
-        line-height: 2;
+        font-size: 1em;
+        line-height: 1.5;
         margin-top: 0.5em; /* Text under heading */
          }
     }

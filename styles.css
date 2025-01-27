@@ -70,20 +70,16 @@ body.home-page {
 }
 
 .hero {
+    text-align: justify;
     background-color: #3be9b0;
    /* color: white;*/
     padding: 5px 5px;
-   
-        text-align: justify;
-        color: #460654;
-        font-size: 1;
-        line-height: 1.5;
-        margin-top: 0.5em; /* Text under heading */
+    color: #460654;
+    font-size: 1;
+    line-height: 1.5;
+     margin-top: 0.5em; /* Text under heading */
          
 }
-
-    
-
 /*
 .home-page .content {
     display: flex;
@@ -94,7 +90,7 @@ body.home-page {
 
 .home-page .column1 img{
     float: left;
-   width: 250px;
+   width: 300px;
     height: 350px;
     padding: 3px;
     margin-top: 1px;

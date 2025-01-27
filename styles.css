@@ -74,14 +74,15 @@ body.home-page {
     color: white;
     text-align: center;
     padding: 5px 5px;
-   .hero .p {
+}
+
+    p {
         text-align: justify;
         color: #460654;
         font-size: 1;
         line-height: 1.5;
         margin-top: 0.5em; /* Text under heading */
          }
-    }
 
 /*
 .home-page .content {

@@ -74,7 +74,7 @@ body.home-page {
     color: white;
     text-align: center;
     padding: 5px 5px;
-       p {
+   .hero .p {
         text-align: justify;
         color: #460654;
         font-size: 1;

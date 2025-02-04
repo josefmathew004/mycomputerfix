@@ -4,28 +4,6 @@ body {
     padding: 0;
 }
 /* Navigation Bar */
-
-  /* Media Queries */
-  @media (max-width: 768px) {
-    nav a {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
-}
 nav {
     background-color: #343a40;
     padding: 1em;

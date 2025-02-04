@@ -195,7 +195,7 @@ body.software-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 1.5em;
 }
 
 .software-page .text-box {

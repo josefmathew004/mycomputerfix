@@ -201,7 +201,7 @@ body.software-page {
 .software-page .text-box {
     flex: 1;
     font-size: 1.15em;
-    line-height: 1.5;
+    line-height: 1.25;
     padding: 1em;
     background-color: #e9ecef;
     margin-right: 1em;

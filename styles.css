@@ -173,7 +173,7 @@ body.service-page {
 .service-page .service-text-box {
     background-color: #f1f1f1;
     padding: 0em;
-    margin-top: 2em;
+    margin-top: 1em;
     line-height: 1.25;
     text-align: justify;
 }
@@ -195,12 +195,12 @@ body.software-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
+    padding: 1em;
 }
 
 .software-page .text-box {
     flex: 1;
-    font-size: 1.15em;
+    font-size: 1em;
     line-height: 1.25;
     padding: 1em;
     background-color: #e9ecef;

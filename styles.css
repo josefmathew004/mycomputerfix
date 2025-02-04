@@ -197,16 +197,16 @@ body.software-page {
     align-items: center;
     padding: 1em;
 }
-/*
+
 .software-page .text-box {
     flex: 1;
-    font-size: 0.5em;
-    line-height: 1.15;
+    font-size: 1.25em;
+    line-height: 1.35;
     padding: 1em;
     background-color: #e9ecef;
     margin-right: 1em;
 }
-*/
+
 .software-page .image-box {
     flex: 1;
     padding: 0em;

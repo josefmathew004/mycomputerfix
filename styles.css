@@ -70,8 +70,8 @@ body.home-page {
 .home-page .container {
     border: 2px solid #898787;
     background-color: #3be9b0;
-    border-radius: 5px;
-    padding: 2px;
+    border-radius: 3px;
+    padding: 1px;
     margin: 3px 0;
 }
 .home-page header h3 {

@@ -195,12 +195,12 @@ body.software-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 .software-page .text-box {
     flex: 1;
-    font-size: 1.25em;
+    font-size: 1.15em;
     line-height: 1.25;
     padding: 1em;
     background-color: #e9ecef;

@@ -3,17 +3,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/* For tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* styles for tablets */
-}
-
-/* For smartphones */
-@media (max-width: 767px) {
-    /* styles for smartphones */
-}
-
 /* Navigation Bar */
 nav {
     background-color: #343a40;
@@ -74,7 +63,7 @@ body.home-page {
 
 .home-page header .logo {
     position: absolute;
-    left: 300px; /* Adjust the left position to move the logo closer */
+    left: 250px; /* Adjust the left position to move the logo closer */
     top: 50%;
     transform: translateY(-50%);
 }
@@ -121,7 +110,7 @@ body.home-page {
     float: left;
     width: 150px;
     height: auto;
-    padding: 2px;
+    padding: 1px;
     margin-top: 5px;
     margin-left: 125px;
 }
@@ -461,4 +450,26 @@ body.contact-page {
    max-width: 100%;
 height: auto;
    position: top -5px; /* Moves the image 2px closer to the top of the page */
+}
+
+  /* Media Queries */
+  @media (max-width: 768px) {
+    nav a {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
 }

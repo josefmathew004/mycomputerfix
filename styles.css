@@ -4,6 +4,16 @@ body {
     padding: 0;
 }
 
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* styles for tablets */
+}
+
+/* For smartphones */
+@media (max-width: 767px) {
+    /* styles for smartphones */
+}
+
 /* Navigation Bar */
 nav {
     background-color: #343a40;

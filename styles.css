@@ -148,7 +148,7 @@ body.service-page {
 
 .service-page .service-content {
     display: flex;
-    margin-top: 1em;
+    margin-top: 0.75em;
     justify-content: space-around;
     padding: 0em;
 }

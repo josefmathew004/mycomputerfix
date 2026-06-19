@@ -1,111 +1,392 @@
 <!DOCTYPE html>
-<html lang="en" class="contact-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact My Computer Fix for laptop, desktop, Mac, and Chromebook repairs in Ottawa. Call, email, WhatsApp, or use our contact form. Available on weekdays after 3:30 PM, Saturdays 10 AM-3 PM, and Sundays after 3 PM.">
-    <meta name="keywords" content="computer repair Ottawa, laptop repair, contact My Computer Fix">
+    <meta name="description" content="Contact My Computer Fix for laptop, desktop, Mac, and Chromebook repairs in Ottawa. Call, email, WhatsApp, or book an appointment.">
     <title>Contact Us - My Computer Fix</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .contact-page-header {
+            background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
+            color: white;
+            padding: 3em 1em;
+            text-align: center;
+        }
+
+        .contact-page-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .contact-content {
+            padding: 4em 1em;
+            background-color: #f8f9fa;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2em;
+            margin-bottom: 4em;
+        }
+
+        .contact-method {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid #ffc107;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .contact-method .icon {
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+
+        .contact-method h3 {
+            color: #1a3d3a;
+            margin-bottom: 0.5em;
+        }
+
+        .contact-method p {
+            color: #666;
+            margin-bottom: 1em;
+        }
+
+        .contact-method a {
+            display: inline-block;
+            background-color: #00796b;
+            color: white;
+            padding: 0.75em 1.5em;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-method a:hover {
+            background-color: #1a3d3a;
+            transform: translateY(-2px);
+        }
+
+        .form-section {
+            background: white;
+            padding: 3em;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 2em auto;
+        }
+
+        .form-section h2 {
+            color: #1a3d3a;
+            margin-bottom: 1.5em;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-group label {
+            display: block;
+            color: #1a3d3a;
+            font-weight: 600;
+            margin-bottom: 0.75em;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75em;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00796b;
+            box-shadow: 0 0 8px rgba(0, 121, 107, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            background-color: #ffc107;
+            color: #1a3d3a;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .booking-section {
+            background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
+            color: white;
+            padding: 3em 1em;
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        .booking-section h2 {
+            margin-bottom: 1em;
+        }
+
+        .booking-btn {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #1a3d3a;
+            padding: 1em 2em;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5em;
+        }
+
+        .booking-btn:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+        }
+
+        .business-hours {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            margin: 2em auto;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .business-hours h3 {
+            color: #1a3d3a;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            padding: 0.75em 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .form-section {
+                padding: 1.5em;
+            }
+
+            .contact-page-header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
-<body class="contact-page">
-    <nav>
-        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-        <div class="nav-menu" id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="mode_of_service.html">Mode of Service</a>
-            <a href="software_services.html">Software Services</a>
-            <a href="hardware_services.html">Hardware Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="contact_us.html">Contact Us</a>
-        </div>
-    </nav>
+<body>
+    <!-- Header/Navigation -->
     <header>
-        <h1>Contact Us</h1>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🖥️</span>
+                <span class="logo-text">My Computer Fix</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#why-us">Why Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <!-- Google Business Profile Section -->
-        <div class="google-profile-section">
-            <h3>📍 Visit Our Google Business Profile</h3>
-            <p>See our reviews, photos, and business information on Google</p>
-            <a href="https://g.page/r/CTX0nlkzFSLIEAI/review" target="_blank">View on Google</a>
+
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact-bar">
+        <a href="tel:+16137962534">📞 (613) 796-2534</a>
+        <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">💬 WhatsApp</a>
+        <a href="mailto:support@mycomputerfix.icu">📧 Email</a>
+        <a href="#booking">📅 Book Appointment</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="contact-page-header">
+        <h1>Contact My Computer Fix</h1>
+        <p>Get in touch with our expert team for fast, reliable computer repairs</p>
+    </div>
+
+    <!-- Contact Methods -->
+    <div class="container" style="padding: 3em 1em;">
+        <div class="contact-methods">
+            <div class="contact-method">
+                <div class="icon">📞</div>
+                <h3>Call Us</h3>
+                <p>Get immediate assistance over the phone</p>
+                <a href="tel:+16137962534">Call (613) 796-2534</a>
+            </div>
+            <div class="contact-method">
+                <div class="icon">💬</div>
+                <h3>WhatsApp</h3>
+                <p>Chat with us instantly via WhatsApp</p>
+                <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">Message on WhatsApp</a>
+            </div>
+            <div class="contact-method">
+                <div class="icon">📧</div>
+                <h3>Email</h3>
+                <p>Send us an email with details of your issue</p>
+                <a href="mailto:support@mycomputerfix.icu">Email Support</a>
+            </div>
+            <div class="contact-method">
+                <div class="icon">🗺️</div>
+                <h3>Visit Us</h3>
+                <p>Visit our location in Ottawa</p>
+                <a href="https://g.page/r/CTX0nlkzFSLIEAI/review" target="_blank">Find on Google</a>
+            </div>
         </div>
+    </div>
 
-        <p1>Contact My Computer Fix - Your trusted computer repair service in Ottawa</p1>
+    <!-- Business Hours -->
+    <div class="business-hours">
+        <h3>⏰ Business Hours</h3>
+        <ul class="hours-list">
+            <li><strong>Weekdays (Mon-Fri):</strong> After 3:30 PM</li>
+            <li><strong>Saturdays:</strong> 10:00 AM - 3:00 PM</li>
+            <li><strong>Sundays:</strong> After 3:00 PM</li>
+        </ul>
+    </div>
 
-        <!-- Quick Contact Methods -->
-        <div class="quick-contact">
-            <div class="contact-method">
-                <h4>📞 Call Us</h4>
-                <p>613-796-2534</p>
-                <a href="tel:+16137962534">Call Now</a>
-            </div>
-            <div class="contact-method">
-                <h4>💬 WhatsApp</h4>
-                <p>Chat with us instantly</p>
-                <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">WhatsApp Now</a>
-            </div>
-            <div class="contact-method">
-                <h4>📧 Email</h4>
-                <p>support@mycomputerfix.icu</p>
-                <a href="mailto:support@mycomputerfix.icu">Send Email</a>
-            </div>
-        </div>
-
-        <p2>
-            Please use the form below or contact us using the methods above for any technical issue, query, or consultation. We're here to help!
-        </p2>
-
-        <p3>
-            <strong>⏰ Business Hours:</strong><br>
-            Weekdays: After 3:30 PM<br>
-            Saturdays: 10:00 AM - 3:00 PM<br>
-            Sundays: After 3:00 PM<br><br>
-            We are also available on WhatsApp Business as 'My Computer Fix'
-        </p3>
-
-        <div class="contact-content">
+    <!-- Contact Form -->
+    <div class="contact-content">
+        <div class="form-section">
+            <h2>Send Us a Message</h2>
             <form action="mailto:support@mycomputerfix.icu" method="post" enctype="text/plain">
-                <h3 style="color: #00796b; margin-top: 0;">Send Us a Message</h3>
                 <div class="form-group">
-                    <label for="name">Name: <span style="color: red;">*</span></label>
+                    <label for="name">Full Name *</label>
                     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email: <span style="color: red;">*</span></label>
+                    <label for="email">Email Address *</label>
                     <input type="email" id="email" name="email" placeholder="your@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="number">Phone Number: <span style="color: red;">*</span></label>
-                    <input type="tel" id="number" name="number" placeholder="613-796-2534" required>
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(613) 796-2534" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Problem Description: <span style="color: red;">*</span></label>
-                    <textarea id="description" name="description" rows="6" placeholder="Please describe your computer issue in detail..." required></textarea>
+                    <label for="device">Device Type *</label>
+                    <select id="device" name="device" required>
+                        <option value="">Select Device Type</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Mac">Mac</option>
+                        <option value="Chromebook">Chromebook</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
-                <button type="submit">Submit</button>
+                <div class="form-group">
+                    <label for="service">Service Needed *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Remote Support">Remote Support</option>
+                        <option value="On-Site Service">On-Site Service</option>
+                        <option value="In-Store Repair">In-Store Repair</option>
+                        <option value="Hardware Upgrade">Hardware Upgrade</option>
+                        <option value="Malware Removal">Malware Removal</option>
+                        <option value="Consultation">Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Problem Description *</label>
+                    <textarea id="description" name="description" placeholder="Please describe your computer issue in detail..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
             </form>
-            <div class="contact-image">
-                <img src="img15.png" alt="Contact My Computer Fix - Computer Repair in Ottawa">
+        </div>
+    </div>
+
+    <!-- Appointment Booking Section -->
+    <div class="booking-section" id="booking">
+        <div class="container">
+            <h2>📅 Book an Appointment</h2>
+            <p>Schedule a convenient time for our technicians to visit or for you to drop off your device</p>
+            <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I'd%20like%20to%20book%20an%20appointment." target="_blank" class="booking-btn">Book via WhatsApp</a>
+            <a href="tel:+16137962534" class="booking-btn">Call to Book</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About My Computer Fix</h4>
+                <p>We're your trusted computer repair service in Ottawa, providing expert repairs for all types of devices with professional service and affordable pricing.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#services">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <a href="tel:+16137962534">📞 (613) 796-2534</a>
+                <a href="mailto:support@mycomputerfix.icu">📧 support@mycomputerfix.icu</a>
+                <a href="https://api.whatsapp.com/send?phone=16137962534" target="_blank">💬 WhatsApp</a>
+            </div>
+            <div class="footer-section">
+                <h4>Business Hours</h4>
+                <p>Weekdays: After 3:30 PM<br>Saturdays: 10:00 AM - 3:00 PM<br>Sundays: After 3:00 PM</p>
             </div>
         </div>
-    </main>
-
-    <footer>
-        &copy; 2026 My Computer Fix | Ottawa Computer Repair Services
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Computer Fix | Ottawa Computer Repair Services | All Rights Reserved</p>
+        </div>
     </footer>
 
     <script>
         function toggleMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
         }
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-menu a').forEach(link => {
+        document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
-                document.getElementById('navMenu').classList.remove('active');
+                document.getElementById('mainNav').classList.remove('active');
             });
         });
     </script>

@@ -1,56 +1,336 @@
 <!DOCTYPE html>
-<html lang="en" class="gallery-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery - My Computer Fix. View our computer repair work including laptop repairs, desktop repairs, and hardware upgrades.">
     <title>Gallery - My Computer Fix</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .gallery-page-header {
+            background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
+            color: white;
+            padding: 3em 1em;
+            text-align: center;
+        }
+
+        .gallery-page-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .gallery-page-content {
+            padding: 4em 1em;
+            background-color: #f8f9fa;
+        }
+
+        .gallery-edit-section {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            margin-bottom: 3em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-edit-section h3 {
+            color: #1a3d3a;
+            margin-bottom: 1em;
+            font-size: 1.3em;
+        }
+
+        .form-group {
+            margin-bottom: 1em;
+        }
+
+        .form-group label {
+            display: block;
+            color: #1a3d3a;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75em;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00796b;
+            box-shadow: 0 0 8px rgba(0, 121, 107, 0.2);
+        }
+
+        .edit-btn {
+            background-color: #ffc107;
+            color: #1a3d3a;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .edit-btn:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+        }
+
+        .gallery-full-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+            margin-top: 3em;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 250px;
+            background-color: #e0e0e0;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(0.7);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 121, 107, 0.9);
+            color: white;
+            padding: 1em;
+            text-align: center;
+            font-weight: 600;
+            transform: translateY(100%);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
+            color: #999;
+            font-size: 3em;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-page-header h1 {
+                font-size: 2em;
+            }
+
+            .gallery-edit-section {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
-<body class="gallery-page">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="mode_of_service.html">Mode of Service</a>
-        <a href="software_services.html">Software Services</a>
-        <a href="hardware_services.html">Hardware Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact_us.html">Contact Us</a>
-    </nav>
+<body>
+    <!-- Header/Navigation -->
     <header>
-        <h1>Gallery</h1>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🖥️</span>
+                <span class="logo-text">My Computer Fix</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#why-us">Why Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main>
 
-      <div class="row">
-        <div class="column">
-          <img src="rep1.JPG">
-          <img src="rep2.JPG">
-          <img src="rep3.JPG">
-          <img src="rep4.JPG">
-          <img src="rep5.JPG">
-          <img src="rep16.JPG"> 
-        </div>
-        <div class="column">
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact-bar">
+        <a href="tel:+16137962534">📞 (613) 796-2534</a>
+        <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">💬 WhatsApp</a>
+        <a href="mailto:support@mycomputerfix.icu">📧 Email</a>
+        <a href="contact_us.html#booking">📅 Book Appointment</a>
+    </div>
 
-          <img src="rep6.JPG">
-          <img src="rep7.JPG">
-          <img src="rep8.JPG">
-          <img src="rep9.JPG">
-          <img src="rep10.JPG">
-          <img src="rep17.JPG">
+    <!-- Page Header -->
+    <div class="gallery-page-header">
+        <h1>Our Work Gallery</h1>
+        <p>See examples of our professional computer repair work</p>
+    </div>
+
+    <!-- Gallery Content -->
+    <div class="gallery-page-content">
+        <div class="container">
+            <!-- Gallery Edit Section -->
+            <div class="gallery-edit-section">
+                <h3>📸 Add/Edit Gallery Images</h3>
+                <p style="color: #666; margin-bottom: 1em; font-size: 0.9em;">Note: You can edit gallery.html directly in your GitHub repository or add image URLs below</p>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" id="imageUrl" placeholder="Enter image URL (e.g., rep1.JPG)">
+                </div>
+                <div class="form-group">
+                    <label>Image Label</label>
+                    <input type="text" id="imageLabel" placeholder="Enter label (e.g., Laptop Repair)">
+                </div>
+                <button class="edit-btn" onclick="addGalleryItem()">+ Add Image</button>
+                <p style="color: #999; font-size: 0.85em; margin-top: 1em; text-align: center;">Or edit the HTML directly in gallery.html to add custom images</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <h2 class="section-title">Repair Gallery</h2>
+            <div class="gallery-full-grid" id="galleryGrid">
+                <!-- Default Gallery Items -->
+                <div class="gallery-item">
+                    <img src="rep1.JPG" alt="Laptop Repair" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🖥️</div>'">
+                    <div class="gallery-overlay">Laptop Repair</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep2.JPG" alt="Desktop Repair" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>💻</div>'">
+                    <div class="gallery-overlay">Desktop Repair</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep3.JPG" alt="Hardware Installation" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🛠️</div>'">
+                    <div class="gallery-overlay">Hardware Installation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep4.JPG" alt="Parts Replacement" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>⚙️</div>'">
+                    <div class="gallery-overlay">Parts Replacement</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep5.JPG" alt="System Diagnostics" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🔍</div>'">
+                    <div class="gallery-overlay">System Diagnostics</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep6.JPG" alt="Mac Repair" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🍎</div>'">
+                    <div class="gallery-overlay">Mac Repair</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep7.JPG" alt="System Upgrade" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>⬆️</div>'">
+                    <div class="gallery-overlay">System Upgrade</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep8.JPG" alt="Screen Replacement" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>📺</div>'">
+                    <div class="gallery-overlay">Screen Replacement</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep9.JPG" alt="Network Setup" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🌐</div>'">
+                    <div class="gallery-overlay">Network Setup</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep10.JPG" alt="Data Recovery" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>💾</div>'">
+                    <div class="gallery-overlay">Data Recovery</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep11.JPG" alt="Chromebook Repair" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>📗</div>'">
+                    <div class="gallery-overlay">Chromebook Repair</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="rep12.JPG" alt="Cleaning & Maintenance" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🧹</div>'">
+                    <div class="gallery-overlay">Cleaning & Maintenance</div>
+                </div>
+            </div>
         </div>
-        <div class="column">
-          <img src="rep11.JPG">
-          <img src="rep12.JPG">
-          <img src="rep13.JPG">
-          <img src="rep14.JPG">
-          <img src="rep15.JPG">
-          <img src="rep18.JPG">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About My Computer Fix</h4>
+                <p>We're your trusted computer repair service in Ottawa, providing expert repairs for all types of devices with professional service and affordable pricing.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#services">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <a href="tel:+16137962534">📞 (613) 796-2534</a>
+                <a href="mailto:support@mycomputerfix.icu">📧 support@mycomputerfix.icu</a>
+                <a href="https://api.whatsapp.com/send?phone=16137962534" target="_blank">💬 WhatsApp</a>
+            </div>
+            <div class="footer-section">
+                <h4>Business Hours</h4>
+                <p>Weekdays: After 3:30 PM<br>Saturdays: 10:00 AM - 3:00 PM<br>Sundays: After 3:00 PM</p>
+            </div>
         </div>
-                    </div>
-       	<footer>
-            &copy; 2026 My Computer Fix
-        </footer>
-    </main>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Computer Fix | Ottawa Computer Repair Services | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+
+        function addGalleryItem() {
+            const url = document.getElementById('imageUrl').value;
+            const label = document.getElementById('imageLabel').value;
+
+            if (!url || !label) {
+                alert('Please enter both image URL and label');
+                return;
+            }
+
+            const gallery = document.getElementById('galleryGrid');
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.innerHTML = `
+                <img src="${url}" alt="${label}" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>🖼️</div>'">
+                <div class="gallery-overlay">${label}</div>
+            `;
+
+            gallery.appendChild(item);
+            document.getElementById('imageUrl').value = '';
+            document.getElementById('imageLabel').value = '';
+            alert('Image added! Refresh the page to see changes. To make permanent changes, edit the HTML file.');
+        }
+    </script>
 </body>
 </html>

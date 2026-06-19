@@ -3,79 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Computer Fix</title>
+    <meta name="description" content="My Computer Fix - Expert computer repair services in Ottawa. We repair laptops, desktops, Macs, and Chromebooks. Remote, on-site, and in-person services available.">
+    <meta name="keywords" content="computer repair Ottawa, laptop repair, desktop repair, Mac repair, Chromebook repair">
+    <title>My Computer Fix - Computer Repair Services in Ottawa</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "My Computer Fix",
+        "image": "https://mycomputerfix.icu/MCF Logo new.png",
+        "description": "Expert computer repair services for laptops, desktops, Macs, and Chromebooks in Ottawa",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ottawa",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+        },
+        "telephone": "+1-613-796-2534",
+        "email": "support@mycomputerfix.icu",
+        "url": "https://mycomputerfix.icu",
+        "sameAs": [
+            "https://g.page/r/CTX0nlkzFSLIEAI/review"
+        ],
+        "priceRange": "$$",
+        "serviceArea": {
+            "@type": "City",
+            "name": "Ottawa"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "15:30",
+                "closes": "21:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "15:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "15:00",
+                "closes": "21:00"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="home-page">
     <nav>
-        <a href="index.html">Home</a>
-        <a href="mode_of_service.html">Mode of Service</a>
-        <a href="software_services.html">Software Services</a>
-        <a href="hardware_services.html">Hardware Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact_us.html">Contact Us</a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="mode_of_service.html">Mode of Service</a>
+            <a href="software_services.html">Software Services</a>
+            <a href="hardware_services.html">Hardware Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact_us.html">Contact Us</a>
+        </div>
     </nav>
     <header>
         <h1>
-          My Computer Fix 
-          <img src="MCF Logo new.png" width="97" height="97" alt="Logo" class="logo">
+            My Computer Fix
+            <img src="MCF Logo new.png" width="97" height="97" alt="My Computer Fix Logo - Computer Repair in Ottawa" class="logo">
         </h1>
     </header>            
     <main>
-      <p align="center"> <i> Your trusted partner for all your computer repair needs in Ottawa area!! </i> </p>
-      <div class="container">
-        <h3> About Us</h3>
-       <!---- <p align="left">
-          We provide Laptop, Desktop, Mac, Chromebook repair services in Ottawa area. 
-          Our Technicians have years of experience in repair and service. 
-          We have the flexible options of Walk-in, On-Site and Remote Services. 
-          We will not charge you unless there is some work that needs to be done. 
-          We will do an assesment on your device and fix issues we can find.
-          Our technicians can handle small fixes like password reset as well as high end repairs involving hardware upgrades. 
-          Our goal is to bring services to you at the best affordable rates as possible in Ottawa. 
-          The timings are flexible, so, feel free to get in touch with us.
-          You can ask any query and we would be more than Happy to help 😊.... 
-       </p>-->
-      <p align="left">
-      We offer expert repair services for laptops, desktops, Macs, and Chromebooks throughout the Ottawa area. 
-      Our skilled technicians bring years of experience to every repair, ensuring quality service you can trust.
-      We provide convenient service options, including walk-in, on-site, and remote support, designed to fit your schedule. 
-      There's no charge unless work is required, and we conduct a thorough assessment to identify and resolve any issues with your device.
-      From simple fixes like password resets to advanced hardware upgrades, our technicians handle it all. 
-      Our mission is to deliver top-quality repairs at the most affordable rates in Ottawa. 
-      With flexible hours, feel free to reach out—we're always happy to assist with any questions!
-      😊.... 
-       </p>
-
+        <p style="text-align: center; font-style: italic; font-size: 1.1em;">Your trusted partner for all your computer repair needs in Ottawa area!!</p>
+        
+        <div class="container">
+            <h3>About Us</h3>
+            <p>
+                We offer expert repair services for laptops, desktops, Macs, and Chromebooks throughout the Ottawa area. 
+                Our skilled technicians bring years of experience to every repair, ensuring quality service you can trust.
+                We provide convenient service options, including walk-in, on-site, and remote support, designed to fit your schedule. 
+                There's no charge unless work is required, and we conduct a thorough assessment to identify and resolve any issues with your device.
+                From simple fixes like password resets to advanced hardware upgrades, our technicians handle it all. 
+                Our mission is to deliver top-quality repairs at the most affordable rates in Ottawa. 
+                With flexible hours, feel free to reach out—we're always happy to assist with any questions! 😊
+            </p>
         </div>
-	<!--<section class="hero">
-               <p>   
-                We provide Laptop, Desktop, Mac, Chromebook repair services in Ottawa area. 
-                Our Technicians have years of experience in repair and service. 
-                We have the flexible options of Walk-in, On-Site and Remote Services. 
-                We will not charge you unless there is some work that needs to be done. 
-                We will do an assesment on your device and fix issues we can find. 
-                Our technicians can handle small fixes like password reset as well as high end repairs involving hardware upgrades. 
-                Our goal is to bring services to you at the best affordable rates as possible in Ottawa. 
-                The timings are flexible, so, feel free to get in touch with us.
-                You can ask any query and we would be more than Happy to help 😊
-          </p>
-          </section>-->
-  <div class="row" >
-    <div class="column1">
-      <img src="img16.png" alt="Service Image" style="width:18%" style="height:auto" style="font-size:0">
-    </div>
-    <div class="column2">
-      <img src="img18.png" alt="Service Image" style="width:28%" style="height:auto" style="font-size:0">
-    </div>
-    <div class="column3">
-      <img src="img21.png" alt="Service Image" style="width:20%" style="height:auto" style="font-size:0">
-    </div>
-  </div>
-      	<footer>
-            &copy; 2026 My Computer Fix
-        </footer>
+
+        <div class="row">
+            <div class="column1">
+                <img src="img16.png" alt="Computer Repair Service">
+            </div>
+            <div class="column2">
+                <img src="img18.png" alt="Laptop Repair Service">
+            </div>
+            <div class="column3">
+                <img src="img21.png" alt="Tech Support Service">
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2em 1em; padding: 1em; background-color: white; border-radius: 8px; border: 2px solid #00796b;">
+            <h3 style="color: #00796b; margin-top: 0;">Ready to Get Your Device Fixed?</h3>
+            <p>Contact us today for fast, reliable computer repair services!</p>
+            <a href="contact_us.html" style="display: inline-block; background-color: #00796b; color: white; padding: 1em 2em; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em;">Contact Us Now</a>
+        </div>
     </main>
+
+    <footer>
+        &copy; 2026 My Computer Fix | Ottawa Computer Repair Services
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

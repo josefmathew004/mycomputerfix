@@ -381,24 +381,32 @@ body.contact-page {
     font-size: 2em;
     color: #00796b;
     margin-top: 0.5em;
+    margin-bottom: 1.5em;
 }
 
 .contact-page .contact-content {
     display: flex;
     /*justify-content: space-between;*/
     /*padding: 1em;*/
-    
+    padding-bottom: 5em;
 }
 .contact-page p1 {
     text-align: center;
     font-size: 1.25em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
     margin-left: 10em;
 }
 .contact-page p2 {
     text-align: center;
     font-size: 1em;
     padding: 2em;
+    margin-bottom: 1em;
+}
+.contact-page p3 {
+    text-align: center;
+    font-size: 1em;
+    padding: 2em;
+    margin-bottom: 2em;
 }
 .contact-page form {
     flex: 1;
@@ -411,13 +419,14 @@ body.contact-page {
 }
 
 .contact-page .form-group {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
     width: 100%;
 }
 
 .contact-page label {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     color: #00796b;
+    display: block;
 }
 
 .contact-page input, .contact-page textarea {
@@ -425,15 +434,17 @@ body.contact-page {
     padding: 0.5em;
     border: 1px solid #ddd;
     border-radius: 4px;
+    margin-bottom: 0.5em;
 }
 
 .contact-page button {
-    padding: 0.5em 1em;
+    padding: 0.75em 1.5em;
     border: none;
     border-radius: 3px;
     background-color: #00796b;
     color: white;
     cursor: pointer;
+    margin-top: 1em;
 }
 
 .contact-page button:hover {
@@ -444,6 +455,7 @@ body.contact-page {
     flex: 1;
     justify-content: space-between;
     padding: 0;
+    margin-top: 2em;
 }
 .contact-page .contact-image img {
    display: flex;

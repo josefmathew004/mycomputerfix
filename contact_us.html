@@ -3,65 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact My Computer Fix for laptop, desktop, Mac, and Chromebook repairs in Ottawa. Call, email, WhatsApp, or use our contact form. Available on weekdays after 3:30 PM, Saturdays 10 AM-3 PM, and Sundays after 3 PM.">
+    <meta name="keywords" content="computer repair Ottawa, laptop repair, contact My Computer Fix">
     <title>Contact Us - My Computer Fix</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="contact-page">
     <nav>
-        <a href="index.html">Home</a>
-        <a href="mode_of_service.html">Mode of Service</a>
-        <a href="software_services.html">Software Services</a>
-        <a href="hardware_services.html">Hardware Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact_us.html">Contact Us</a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="mode_of_service.html">Mode of Service</a>
+            <a href="software_services.html">Software Services</a>
+            <a href="hardware_services.html">Hardware Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="contact_us.html">Contact Us</a>
+        </div>
     </nav>
     <header>
         <h1>Contact Us</h1>
     </header>
     <main>
-        <p1> 
-            Visit our Google Business Profile - My Computer Fix - for more reviews and other updates
-        </p1>
-        <br>
-        <br>
-<p2>
-    Please use the form below or send us an email to <u>support@mycomputerfix.icu</u> for a technical issue, a query or a consultation that you need our assitance. 
-    <br>
-    </p2>
-    <p3>
-    You can also text us at 613-796-2534. We are also available on Whatsapp Business chat as 'My Computer Fix'.
-    <br>
-    Please note that we will be open only after 3.30 pm on weekdays and from 10:00 am to 3:00 pm on Saturdays and after 3:00 pm on Sundays.    
-    </p3>
+        <!-- Google Business Profile Section -->
+        <div class="google-profile-section">
+            <h3>📍 Visit Our Google Business Profile</h3>
+            <p>See our reviews, photos, and business information on Google</p>
+            <a href="https://g.page/r/CTX0nlkzFSLIEAI/review" target="_blank">View on Google</a>
+        </div>
+
+        <p1>Contact My Computer Fix - Your trusted computer repair service in Ottawa</p1>
+
+        <!-- Quick Contact Methods -->
+        <div class="quick-contact">
+            <div class="contact-method">
+                <h4>📞 Call Us</h4>
+                <p>613-796-2534</p>
+                <a href="tel:+16137962534">Call Now</a>
+            </div>
+            <div class="contact-method">
+                <h4>💬 WhatsApp</h4>
+                <p>Chat with us instantly</p>
+                <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">WhatsApp Now</a>
+            </div>
+            <div class="contact-method">
+                <h4>📧 Email</h4>
+                <p>support@mycomputerfix.icu</p>
+                <a href="mailto:support@mycomputerfix.icu">Send Email</a>
+            </div>
+        </div>
+
+        <p2>
+            Please use the form below or contact us using the methods above for any technical issue, query, or consultation. We're here to help!
+        </p2>
+
+        <p3>
+            <strong>⏰ Business Hours:</strong><br>
+            Weekdays: After 3:30 PM<br>
+            Saturdays: 10:00 AM - 3:00 PM<br>
+            Sundays: After 3:00 PM<br><br>
+            We are also available on WhatsApp Business as 'My Computer Fix'
+        </p3>
 
         <div class="contact-content">
             <form action="mailto:support@mycomputerfix.icu" method="post" enctype="text/plain">
+                <h3 style="color: #00796b; margin-top: 0;">Send Us a Message</h3>
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name: <span style="color: red;">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email: <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="number">Phone Number:</label>
-                    <input type="number" id="text" name="number" required>
+                    <label for="number">Phone Number: <span style="color: red;">*</span></label>
+                    <input type="tel" id="number" name="number" placeholder="613-796-2534" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Problem Description:</label>
-                    <textarea id="description" name="description" rows="6" required></textarea>
+                    <label for="description">Problem Description: <span style="color: red;">*</span></label>
+                    <textarea id="description" name="description" rows="6" placeholder="Please describe your computer issue in detail..." required></textarea>
                 </div>
                 <button type="submit">Submit</button>
             </form>
             <div class="contact-image">
-                <img src="img15.png" alt="Contact Image" width="75%" height="80%">
+                <img src="img15.png" alt="Contact My Computer Fix - Computer Repair in Ottawa">
             </div>
         </div>
-<footer>
-            &copy; 2026 My Computer Fix
-        </footer>
     </main>
+
+    <footer>
+        &copy; 2026 My Computer Fix | Ottawa Computer Repair Services
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

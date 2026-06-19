@@ -108,10 +108,8 @@ nav a:hover {
 .hero {
     background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
     color: white;
-    padding: 5em 1em;
-    text-align: center;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
-}
+    padding: 2.5em 1em;
+    text-align: center;}
 
 .hero-content {
     max-width: 900px;
@@ -120,7 +118,7 @@ nav a:hover {
 
 .hero h1 {
     font-size: 3em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
     font-weight: 700;
 }
 

@@ -108,8 +108,10 @@ nav a:hover {
 .hero {
     background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
     color: white;
-    padding: 2.5em 1em;
-    text-align: center;}
+    padding: 2em 1em;
+    text-align: center;
+    background-image: url('data:image/svg+xml,...');
+}
 
 .hero-content {
     max-width: 900px;
@@ -118,7 +120,7 @@ nav a:hover {
 
 .hero h1 {
     font-size: 3em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.2em;
     font-weight: 700;
 }
 

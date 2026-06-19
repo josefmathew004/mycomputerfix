@@ -1,53 +1,354 @@
 <!DOCTYPE html>
-<html lang="en" class="software-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Services - My Computer Fix. OS installation, malware removal, system optimization, software troubleshooting in Ottawa.">
     <title>Software Services - My Computer Fix</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .service-page-header {
+            background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
+            color: white;
+            padding: 3em 1em;
+            text-align: center;
+        }
+
+        .service-page-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .service-content {
+            padding: 4em 1em;
+            background-color: #f8f9fa;
+        }
+
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2em;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 5px solid #ffc107;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .feature-card h3 {
+            color: #1a3d3a;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .software-list {
+            background: white;
+            padding: 2.5em;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .software-list h3 {
+            color: #1a3d3a;
+            margin-bottom: 1.5em;
+            font-size: 1.3em;
+        }
+
+        .software-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+        }
+
+        .category {
+            background: #f8f9fa;
+            padding: 1.5em;
+            border-radius: 8px;
+        }
+
+        .category h4 {
+            color: #00796b;
+            margin-bottom: 1em;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .category li {
+            padding: 0.5em 0;
+            color: #666;
+            padding-left: 1.5em;
+            position: relative;
+        }
+
+        .category li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .process-timeline {
+            position: relative;
+            padding: 2em 0;
+            margin: 3em 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 2em;
+            padding-left: 4em;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0.75em;
+            top: 0;
+            width: 2.5em;
+            height: 2.5em;
+            background: #ffc107;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a3d3a;
+        }
+
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 2em;
+            top: 2.5em;
+            width: 2px;
+            height: 3em;
+            background: #ddd;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .timeline-item h4 {
+            color: #1a3d3a;
+            margin-bottom: 0.5em;
+        }
+
+        @media (max-width: 768px) {
+            .service-page-header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
-<body class="software-page">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="mode_of_service.html">Mode of Service</a>
-        <a href="software_services.html">Software Services</a>
-        <a href="hardware_services.html">Hardware Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact_us.html">Contact Us</a>
-    </nav>
+<body>
+    <!-- Header/Navigation -->
     <header>
-        <h1>Software Services</h1>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🖥️</span>
+                <span class="logo-text">My Computer Fix</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#why-us">Why Us</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <div class="content">
-            <div class="text-box">
-                <ul>
-                    <li>OS Installation & Update:</li>
-                    <ul>
-                        <li>Windows, Mac OS, Linux, Chrome OS</li>
-                    </ul>
-                    <li>Chrome OS Flex on Older Laptops</li>
-                    <li>Licensed Software Application Installation and Serialization</li>
-                    <li>Fixing Application Issues</li>
-                    <li>System Tune-up</li>
-					<li>Malware and Virus Removal</li>
-                    <li>BIOS update*</li>
-                    <li>OS Password Bypass*</li>
-                    <li>Bios Password Bypass*</li>
-                    <li>Encryption Fixes*</li>
-                 </ul>
-                 <p> 
-                    <font size="0.5">  *Only for eligible systems </font>
-                </p>
+
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact-bar">
+        <a href="tel:+16137962534">📞 (613) 796-2534</a>
+        <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">💬 WhatsApp</a>
+        <a href="mailto:support@mycomputerfix.icu">📧 Email</a>
+        <a href="contact_us.html#booking">📅 Book Appointment</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="service-page-header">
+        <h1>Software Services</h1>
+        <p>Expert software solutions for all your computing needs</p>
+    </div>
+
+    <!-- Content -->
+    <div class="service-content">
+        <div class="container">
+            <!-- Main Features -->
+            <h2 class="section-title">Our Software Services</h2>
+            <div class="service-features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🖲️</div>
+                    <h3>OS Installation & Updates</h3>
+                    <p>Professional installation of Windows, macOS, Linux, and Chrome OS. Keep your system up-to-date and secure with our update services.</p>
                 </div>
-            <div class="image-box">
-                <img src="img13.jpg" alt="Software Service">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Malware & Virus Removal</h3>
+                    <p>Complete removal of viruses, malware, spyware, and ransomware. We ensure your system is clean and protected.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>System Optimization</h3>
+                    <p>Speed up your computer by removing junk files, optimizing startup, and improving performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Driver Installation</h3>
+                    <p>Update and install all necessary drivers for optimal hardware performance and compatibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Software Installation</h3>
+                    <p>Install and configure licensed software, applications, and productivity tools for your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Security Solutions</h3>
+                    <p>Setup firewalls, antivirus protection, and security patches to keep your data safe.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Services -->
+            <div class="software-list" style="margin-top: 3em;">
+                <h3>Complete Software Services List</h3>
+                <div class="software-categories">
+                    <div class="category">
+                        <h4>Operating Systems</h4>
+                        <ul>
+                            <li>Windows Installation & Setup</li>
+                            <li>macOS Installation & Updates</li>
+                            <li>Linux Installation</li>
+                            <li>Chrome OS Flex</li>
+                            <li>OS Recovery & Repair</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h4>Security & Protection</h4>
+                        <ul>
+                            <li>Malware Removal</li>
+                            <li>Virus Cleanup</li>
+                            <li>Ransomware Removal</li>
+                            <li>Antivirus Setup</li>
+                            <li>Password Protection</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h4>Optimization</h4>
+                        <ul>
+                            <li>System Tune-up</li>
+                            <li>Startup Optimization</li>
+                            <li>Registry Cleanup</li>
+                            <li>Hard Drive Cleanup</li>
+                            <li>Memory Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h4>Advanced Solutions</h4>
+                        <ul>
+                            <li>BIOS Updates*</li>
+                            <li>OS Password Bypass*</li>
+                            <li>Encryption Fixes*</li>
+                            <li>File Recovery</li>
+                            <li>System Backup Setup</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="color: #999; font-size: 0.85em; margin-top: 1em; text-align: center;">*Only for eligible systems</p>
+            </div>
+
+            <!-- Process -->
+            <h2 class="section-title" style="margin-top: 3em;">Our Process</h2>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <h4>1. Assessment</h4>
+                    <p>We diagnose your software issues using advanced diagnostic tools and analyze your system thoroughly.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2. Diagnosis Report</h4>
+                    <p>Receive a detailed report of all issues found with recommendations for solutions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>3. Solution Implementation</h4>
+                    <p>We implement the agreed-upon solutions, ensuring your system runs smoothly.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>4. Testing & Verification</h4>
+                    <p>Thorough testing ensures all issues are resolved and your system is optimized.</p>
+                </div>
             </div>
         </div>
-	<footer>
-            &copy; 2025 My Computer Fix
-        </footer>
-    </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About My Computer Fix</h4>
+                <p>We're your trusted computer repair service in Ottawa, providing expert repairs for all types of devices with professional service and affordable pricing.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <a href="tel:+16137962534">📞 (613) 796-2534</a>
+                <a href="mailto:support@mycomputerfix.icu">📧 support@mycomputerfix.icu</a>
+                <a href="https://api.whatsapp.com/send?phone=16137962534" target="_blank">💬 WhatsApp</a>
+            </div>
+            <div class="footer-section">
+                <h4>Business Hours</h4>
+                <p>Weekdays: After 3:30 PM<br>Saturdays: 10:00 AM - 3:00 PM<br>Sundays: After 3:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Computer Fix | Ottawa Computer Repair Services | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

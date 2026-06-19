@@ -1,67 +1,352 @@
 <!DOCTYPE html>
-<html lang="en" class="service-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mode of Service - My Computer Fix. Learn about our on-site support, remote assistance, in-person appointments, and consultation services.">
     <title>Mode of Service - My Computer Fix</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .service-page-header {
+            background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
+            color: white;
+            padding: 3em 1em;
+            text-align: center;
+        }
+
+        .service-page-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .service-modes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5em;
+            margin: 3em 0;
+        }
+
+        .mode-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 5px solid #ffc107;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .mode-header {
+            background: linear-gradient(135deg, #00796b 0%, #1a3d3a 100%);
+            color: white;
+            padding: 2em 1.5em;
+            text-align: center;
+        }
+
+        .mode-icon {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .mode-card h3 {
+            color: white;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .mode-content {
+            padding: 2em;
+        }
+
+        .mode-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1em;
+        }
+
+        .mode-features {
+            list-style: none;
+            margin: 1.5em 0;
+        }
+
+        .mode-features li {
+            padding: 0.5em 0;
+            color: #666;
+            padding-left: 1.5em;
+            position: relative;
+        }
+
+        .mode-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00796b;
+            font-weight: bold;
+        }
+
+        .mode-cta {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #1a3d3a;
+            padding: 0.75em 1.5em;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 1em;
+        }
+
+        .mode-cta:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+        }
+
+        .service-content {
+            padding: 4em 1em;
+            background-color: #f8f9fa;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #00796b 0%, #1a3d3a 100%);
+            color: white;
+            padding: 1.5em;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.25em 1.5em;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .service-page-header h1 {
+                font-size: 2em;
+            }
+
+            .service-modes {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
-
-<body class="service-page">
-       <nav>
-        <a href="index.html">Home</a>
-        <a href="mode_of_service.html">Mode of Service</a>
-        <a href="software_services.html">Software Services</a>
-        <a href="hardware_services.html">Hardware Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact_us.html">Contact Us</a>
-    </nav>
+<body>
+    <!-- Header/Navigation -->
     <header>
-        <h1>Mode of Service</h1>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🖥️</span>
+                <span class="logo-text">My Computer Fix</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#why-us">Why Us</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <div class="service-content">
 
-            <div class="service-section">
-                <h3>On-Site Support</h3>
-                <img src="img20.png" alt="On-Site Support" width= "300" height="250">
-               		 <div class="service-text-box">
-                    Our technician will come to your location for fixing up the issue.
-                    We try to fix the issues then and there. 
-                    If it needs further checkups, we will take it to our service location for depper diagnostics and repair.
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact-bar">
+        <a href="tel:+16137962534">📞 (613) 796-2534</a>
+        <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">💬 WhatsApp</a>
+        <a href="mailto:support@mycomputerfix.icu">📧 Email</a>
+        <a href="contact_us.html#booking">📅 Book Appointment</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="service-page-header">
+        <h1>Mode of Service</h1>
+        <p>Choose the service mode that works best for you</p>
+    </div>
+
+    <!-- Service Modes -->
+    <div class="service-content">
+        <div class="container">
+            <div class="service-modes">
+                <div class="mode-card">
+                    <div class="mode-header">
+                        <div class="mode-icon">🏠</div>
+                        <h3>On-Site Support</h3>
+                    </div>
+                    <div class="mode-content">
+                        <p>Our technician visits your home or office to diagnose and fix your computer issues on the spot.</p>
+                        <ul class="mode-features">
+                            <li>Free on-site diagnosis</li>
+                            <li>Same-day repairs when possible</li>
+                            <li>Convenient scheduling</li>
+                            <li>No need to move your device</li>
+                            <li>Professional service in your space</li>
+                        </ul>
+                        <a href="contact_us.html#booking" class="mode-cta">Book On-Site Visit</a>
+                    </div>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-header">
+                        <div class="mode-icon">💻</div>
+                        <h3>Remote Assistance</h3>
+                    </div>
+                    <div class="mode-content">
+                        <p>We handle your issue remotely using secure remote desktop tools.</p>
+                        <ul class="mode-features">
+                            <li>Instant support via phone</li>
+                            <li>TeamViewer/MS Teams/RDP support</li>
+                            <li>Perfect for software issues</li>
+                            <li>Fast turnaround</li>
+                            <li>Work from your comfort</li>
+                        </ul>
+                        <a href="contact_us.html#booking" class="mode-cta">Request Remote Support</a>
+                    </div>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-header">
+                        <div class="mode-icon">🛠️</div>
+                        <h3>In-Store Repair</h3>
+                    </div>
+                    <div class="mode-content">
+                        <p>Drop off your device at our location for detailed diagnostics and expert repair.</p>
+                        <ul class="mode-features">
+                            <li>Fast turnaround times</li>
+                            <li>Detailed diagnostics</li>
+                            <li>Free hardware assessment</li>
+                            <li>Pickup/drop-off available</li>
+                            <li>Regular status updates</li>
+                        </ul>
+                        <a href="contact_us.html#booking" class="mode-cta">Drop Off Device</a>
+                    </div>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-header">
+                        <div class="mode-icon">💡</div>
+                        <h3>Consultation Services</h3>
+                    </div>
+                    <div class="mode-content">
+                        <p>Need advice on technology? Our experts help you make the right choice.</p>
+                        <ul class="mode-features">
+                            <li>Device purchasing advice</li>
+                            <li>Performance optimization</li>
+                            <li>Security recommendations</li>
+                            <li>Business IT consultation</li>
+                            <li>Flexible consultation hours</li>
+                        </ul>
+                        <a href="contact_us.html#booking" class="mode-cta">Schedule Consultation</a>
+                    </div>
                 </div>
             </div>
-            <div class="service-section">
-                <h3>Remote Assistance</h3>
-                <img src="img3.png" alt="Remote Assistance">
-                <div class="service-text-box">
-                    We attend to your issue remotely- Phone, TeamViewer, MS Teams, Remote Desktop.
-                    Most of the software and driver issues can be dealt remotely.
-                </div>
+
+            <h2 class="section-title" style="margin-top: 3em;">Service Comparison</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Service Type</th>
+                        <th>Best For</th>
+                        <th>Typical Duration</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>On-Site Support</strong></td>
+                        <td>Desktop issues, hardware problems</td>
+                        <td>1-2 hours</td>
+                        <td>Competitive rates</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Remote Assistance</strong></td>
+                        <td>Software, drivers, updates</td>
+                        <td>30 mins - 1 hour</td>
+                        <td>Most affordable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>In-Store Repair</strong></td>
+                        <td>Complex hardware issues</td>
+                        <td>1-3 days</td>
+                        <td>Transparent pricing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consultation</strong></td>
+                        <td>Purchase decisions, planning</td>
+                        <td>30 mins - 1 hour</td>
+                        <td>Free or nominal fee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About My Computer Fix</h4>
+                <p>We're your trusted computer repair service in Ottawa, providing expert repairs for all types of devices with professional service and affordable pricing.</p>
             </div>
-              <div class="service-section">
-                <h3>In-Person Appointments</h3>
-                <img src="img1.png" alt="In-Store Repair">
-                <div class="service-text-box">
-                    Feel free to book an appointment for an in-person visit to drop off your laptop / desktop / MacBook / Chromebook. 
-                    We try to fix things as early as possible with less hazzles for the customer. 
-					Send a message on our email or phone number for booking appointments.
-                </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
             </div>
-            <div class="service-section">
-                <h3>Consultation Services</h3>
-                <img src="img14.png" alt="Consultation Service">
-                <div class="service-text-box">
-                    Consultation available on technology to be purchased based on client need:- 
-                    Student, Surfing, Designer, Entrepreneur, Business, Gaming..
-                    All needs can be incorporated when thinking of purchasing a device.
-                </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <a href="tel:+16137962534">📞 (613) 796-2534</a>
+                <a href="mailto:support@mycomputerfix.icu">📧 support@mycomputerfix.icu</a>
+                <a href="https://api.whatsapp.com/send?phone=16137962534" target="_blank">💬 WhatsApp</a>
+            </div>
+            <div class="footer-section">
+                <h4>Business Hours</h4>
+                <p>Weekdays: After 3:30 PM<br>Saturdays: 10:00 AM - 3:00 PM<br>Sundays: After 3:00 PM</p>
             </div>
         </div>
-	<footer>
-            &copy; 2026 My Computer Fix
-        </footer>
-    </main>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Computer Fix | Ottawa Computer Repair Services | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

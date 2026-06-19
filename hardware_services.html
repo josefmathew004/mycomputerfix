@@ -1,55 +1,345 @@
 <!DOCTYPE html>
-<html lang="en" class="hardware-page">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hardware Services - My Computer Fix. RAM upgrades, SSD installation, hardware repairs, network setup in Ottawa.">
     <title>Hardware Services - My Computer Fix</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
+    <style>
+        .service-page-header {
+            background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
+            color: white;
+            padding: 3em 1em;
+            text-align: center;
+        }
+
+        .service-page-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .service-content {
+            padding: 4em 1em;
+            background-color: #f8f9fa;
+        }
+
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2em;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 5px solid #ffc107;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .feature-card h3 {
+            color: #1a3d3a;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .hardware-list {
+            background: white;
+            padding: 2.5em;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .hardware-list h3 {
+            color: #1a3d3a;
+            margin-bottom: 1.5em;
+            font-size: 1.3em;
+        }
+
+        .hardware-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+        }
+
+        .category {
+            background: #f8f9fa;
+            padding: 1.5em;
+            border-radius: 8px;
+        }
+
+        .category h4 {
+            color: #00796b;
+            margin-bottom: 1em;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .category li {
+            padding: 0.5em 0;
+            color: #666;
+            padding-left: 1.5em;
+            position: relative;
+        }
+
+        .category li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .benefits-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5f4 100%);
+            padding: 3em;
+            border-radius: 12px;
+            margin: 3em 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 1.5em;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .benefit-item .icon {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .benefit-item h4 {
+            color: #1a3d3a;
+            margin-bottom: 0.5em;
+        }
+
+        @media (max-width: 768px) {
+            .service-page-header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
-<body class="hardware-page">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="mode_of_service.html">Mode of Service</a>
-        <a href="software_services.html">Software Services</a>
-        <a href="hardware_services.html">Hardware Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact_us.html">Contact Us</a>
-    </nav>
+<body>
+    <!-- Header/Navigation -->
     <header>
-        <h1>Hardware Services</h1>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🖥️</span>
+                <span class="logo-text">My Computer Fix</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#why-us">Why Us</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <div class="content">
-            <div class="text-box">
-                <ul>
-                    <li>Upgrade:</li>
-                    <ul>
-                        <li>RAM, SSD, Battery, Screen*, Keyboard, Graphics*, Fan*, Power Adapter</li>
-                    </ul>
-                    <li>Desktop Setup</li>
-                    <li>Home Network Setup</li>
-                    <li>Multi-display and Casting Setup (Computer + Monitor / TV / Projector)</li>
-                    <li>Motherboard Replacement*</li>
-                    <li>Peripheral Repair and Replacement*</li>
-                    <li>Printer Setup</li>
-                    <li>Bios Password Bypass**</li>
-                    <li>TPM Fix**</li>
-					<li>Soldering of components</li>
-                 </ul>
-                 <p> 
-                    <font size="0.5">    *Based on Parts Availability 
-                                        **Only for eligible systems
-                    </font>
-                </p>
+
+    <!-- Quick Contact Bar -->
+    <div class="quick-contact-bar">
+        <a href="tel:+16137962534">📞 (613) 796-2534</a>
+        <a href="https://api.whatsapp.com/send?phone=16137962534&text=Hi%20My%20Computer%20Fix,%20I%20need%20your%20help." target="_blank">💬 WhatsApp</a>
+        <a href="mailto:support@mycomputerfix.icu">📧 Email</a>
+        <a href="contact_us.html#booking">📅 Book Appointment</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="service-page-header">
+        <h1>Hardware Services</h1>
+        <p>Expert hardware repairs and upgrades to boost your device performance</p>
+    </div>
+
+    <!-- Content -->
+    <div class="service-content">
+        <div class="container">
+            <!-- Main Features -->
+            <h2 class="section-title">Our Hardware Services</h2>
+            <div class="service-features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>RAM Upgrades</h3>
+                    <p>Increase your system memory for better multitasking and overall performance improvements.</p>
                 </div>
-                       <div class="image-box">
-                <img src="img6.png" alt="Hardware Service">
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>SSD Installation</h3>
+                    <p>Replace slow hard drives with fast SSDs for lightning-quick boot times and file access.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Battery Replacement</h3>
+                    <p>Replace worn-out laptop batteries to restore full battery life and mobility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3>Screen Repair</h3>
+                    <p>Fix cracked, broken, or malfunctioning displays with quality replacement screens.*</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Keyboard Replacement</h3>
+                    <p>Replace broken or unresponsive keyboards with new, fully functional ones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Network Setup</h3>
+                    <p>Professional setup of WiFi networks, multi-display configurations, and device casting.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Services -->
+            <div class="hardware-list" style="margin-top: 3em;">
+                <h3>Complete Hardware Services</h3>
+                <div class="hardware-categories">
+                    <div class="category">
+                        <h4>Upgrades</h4>
+                        <ul>
+                            <li>RAM Upgrades</li>
+                            <li>SSD/HDD Installation</li>
+                            <li>Battery Replacement</li>
+                            <li>Graphics Card Installation</li>
+                            <li>CPU Upgrades (Select Models)</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h4>Repairs & Replacement</h4>
+                        <ul>
+                            <li>Screen Replacement*</li>
+                            <li>Keyboard Repair/Replace</li>
+                            <li>Motherboard Repair*</li>
+                            <li>Fan & Cooling System</li>
+                            <li>Power Adapter Replacement</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h4>Setup & Configuration</h4>
+                        <ul>
+                            <li>Desktop Setup</li>
+                            <li>Home Network Setup</li>
+                            <li>Multi-Display Setup</li>
+                            <li>Printer Setup</li>
+                            <li>Peripheral Configuration</li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h4>Advanced Services</h4>
+                        <ul>
+                            <li>BIOS Password Reset**</li>
+                            <li>TPM Fix**</li>
+                            <li>Soldering & Repair</li>
+                            <li>Hardware Diagnostics</li>
+                            <li>Cooling Solution Setup</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="color: #999; font-size: 0.85em; margin-top: 1em; text-align: center;">*Based on parts availability  **Only for eligible systems</p>
+            </div>
+
+            <!-- Benefits -->
+            <div class="benefits-section">
+                <h2 class="section-title" style="margin-bottom: 1em;">Benefits of Hardware Upgrades</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="icon">⚡</div>
+                        <h4>Faster Performance</h4>
+                        <p>Noticeable speed improvements for everyday tasks and applications.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">💪</div>
+                        <h4>Better Multitasking</h4>
+                        <p>Run multiple programs smoothly without slowdowns or crashes.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">💰</div>
+                        <h4>Cost-Effective</h4>
+                        <p>Extend device lifespan without buying new equipment.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">🎮</div>
+                        <h4>Enhanced Gaming</h4>
+                        <p>Better frame rates and smoother gameplay experience.</p>
+                    </div>
+                </div>
             </div>
         </div>
-	<footer>
-            &copy; 2026 My Computer Fix
-        </footer>
-    </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About My Computer Fix</h4>
+                <p>We're your trusted computer repair service in Ottawa, providing expert repairs for all types of devices with professional service and affordable pricing.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#gallery">Gallery</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="contact_us.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <a href="tel:+16137962534">📞 (613) 796-2534</a>
+                <a href="mailto:support@mycomputerfix.icu">📧 support@mycomputerfix.icu</a>
+                <a href="https://api.whatsapp.com/send?phone=16137962534" target="_blank">💬 WhatsApp</a>
+            </div>
+            <div class="footer-section">
+                <h4>Business Hours</h4>
+                <p>Weekdays: After 3:30 PM<br>Saturdays: 10:00 AM - 3:00 PM<br>Sundays: After 3:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Computer Fix | Ottawa Computer Repair Services | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

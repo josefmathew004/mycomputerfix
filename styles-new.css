@@ -38,7 +38,16 @@ header {
     font-size: 1.3em;
     font-weight: bold;
 }
+.logo-image {
+    height: 60px;
+    width: auto;
+    display: block;
+}
 
+.business-hours {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
 /* Navigation Menu */
 nav {
     display: flex;

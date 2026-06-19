@@ -30,7 +30,19 @@ header {
     justify-content: space-between;
     align-items: center;
 }
- .logo
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 45px;
+    }
+}
+/* .logo
 {
     display: flex;
     align-items: center;
@@ -42,7 +54,7 @@ header {
 .logo-icon {
     font-size: 1.8em;
 }
-
+*/
 /* Navigation Menu */
 nav {
     display: flex;

@@ -9,6 +9,41 @@
     <link rel="stylesheet" href="styles-new.css">
 </head>
 <body>
+
+    <div class="site-notice">
+    📢 Holiday Notice: We will be closed from <strong>July 17 to July 19</strong>. 
+        We will respond to all inquiries and resume repairs on <strong>July 20</strong>. 
+        Thank you for your understanding!
+</div>
+     <style>
+        .site-notice {
+            background: #ffcc00;
+            color: #222;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 2px solid #e6b800;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .site-notice strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .site-notice {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+
+
     <!-- Header/Navigation -->
     <header>
 

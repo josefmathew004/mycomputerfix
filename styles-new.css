@@ -107,7 +107,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #1a3d3a 0%, #00796b 100%);
-    color: white;
+    color: black;
     padding: 2em 1em;
     text-align: center;
     background-image: url('data:image/svg+xml,...');

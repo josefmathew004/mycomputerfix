@@ -43,6 +43,89 @@
 
 -->
 
+    <!-- Dynamic Updates Banner (Drop-in Component) -->
+<style>
+    .updates-banner {
+        background: linear-gradient(135deg, #1976d2, #0d47a1);
+        color: white;
+        padding: 12px 20px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .updates-banner .icon {
+        font-size: 1.3rem;
+    }
+
+    .updates-text {
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+
+    .updates-banner a {
+        color: #bbdefb;
+        text-decoration: underline;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .updates-banner a:hover {
+        color: white;
+    }
+
+    /* Dark Mode Support */
+    .dark-mode .updates-banner {
+        background: linear-gradient(135deg, #2196f3, #1565c0);
+        color: #e3f2fd;
+    }
+
+    .dark-mode .updates-banner a {
+        color: #e3f2fd;
+    }
+
+    .dark-mode .updates-banner a:hover {
+        color: white;
+    }
+</style>
+
+<div class="updates-banner">
+    <div class="icon">🔔</div>
+    <span class="updates-text" id="updatesText"></span>
+    <a href="#services">See Details</a>
+</div>
+
+<script>
+    const updates = [
+        "New IT Recycling Service Now Available for customers!",
+        "RAM and SSD shortage affecting Computer prices globally!",
+                
+    ];
+
+    let index = 0;
+    const textElement = document.getElementById("updatesText");
+
+    function updateText() {
+        textElement.style.opacity = 0;
+
+        setTimeout(() => {
+            textElement.textContent = updates[index];
+            textElement.style.opacity = 1;
+            index = (index + 1) % updates.length;
+        }, 500);
+    }
+
+    updateText();
+    setInterval(updateText, 4000);
+</script>
+
 
     <!-- Header/Navigation -->
     <header>
